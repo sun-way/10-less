@@ -13,7 +13,6 @@ error_reporting(-1);
     public function getPrice(){
         return $this->price;
     }
-
     protected function getPriceDiscount(){
         if ($this->getDiscount()) {
             return round($this->price - ($this->price * $this->getDiscount()/100));
@@ -25,7 +24,6 @@ error_reporting(-1);
     public function getFunGetPriceDiscount(){
         return $this->getPriceDiscount();
     }
-
     public function __construct($title, $price, $weight){
         $this->title = $title;
         $this->price = $price;
