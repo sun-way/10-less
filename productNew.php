@@ -1,19 +1,15 @@
-
 <?php
 header('Content-Type: text/html; charset:utf-8');
 error_reporting(-1);
-
  class Product {
     public $title;
     protected $price;
     public $weight;
     public  $dostavka=250;
     private $discount = 10;
-
     public function getDiscount(){
         return $this->discount;
     }
-
     public function getPrice(){
         return $this->price;
     }
@@ -26,9 +22,6 @@ error_reporting(-1);
             return $this->price;
         }
     }
-
-
-
     public function getFunGetPriceDiscount(){
         return $this->getPriceDiscount();
     }
@@ -39,9 +32,7 @@ error_reporting(-1);
         $this->weight = $weight;
     }
 }
-
 class Planshet extends Product{}
-
 class Potato extends Product{
     function getFunGetPriceDiscount(){
         if($this->weight > 10000){
@@ -52,14 +43,10 @@ class Potato extends Product{
         }
     }
 }
-
 class Jacket extends Product{}
-
-
 $planshet = new Planshet('Планшет', 2000, 400);
 $potato = new Potato('Картошка', 700, 12000);
 $jacket = new Jacket('Куртка', 700, 2000);
-
 ?>
 <!DOCTYPE html>
 <html>
