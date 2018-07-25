@@ -1,7 +1,5 @@
+//////////10 основное задание
 <?php
-
-
-
 interface  iVenicle{
     public function is_need();
     public function accelerate($speed );
@@ -82,8 +80,6 @@ echo '<br />';
 echo 'Honda восстребована на рынке: ', $Honda->is_need() ? 'да' : 'нет', '<br />';
 echo 'Bmv  восстребована на рынке: ', $bmv->is_need() ? 'да' : 'нет', '<br />';
 echo '********************************************************<br>';
-
-
 interface imedi{
     public function pushOnButton();
     public function turnOn();
@@ -98,7 +94,6 @@ interface imedi{
     public $isOn = false;
 
 }
-
 class TV extends media
 {
 
@@ -139,7 +134,6 @@ $tvLG = new TV('LG', 'Multi Max 3000', 130);
 $tvPhilips->turnOn();
 $tvPhilips->turnOff();
 $tvLG->pushOnButton();
-
 echo 'Philips работает? ', $tvPhilips->isOn() ? 'да.нажата  кнопка' : 'нет', '<br><br>';
 echo 'LG работает? ', $tvLG->isOn() ? 'да, нажата  кнопка ON' : 'нет', '<br />';
 echo 'Philips выклю4ен? ', $tvPhilips->turnOff() ? 'да, отклю4или его' : 'нет', '<br />';
@@ -236,7 +230,6 @@ echo '<br />';
 $duck1->feed($bread);
 echo 'Утка '.$duck1->number.'  после кормления весит: ', $duck1->getWeigth(), '<br>';
 echo '********************************************************<br>';
-
 interface  iShop{
     public function __construct($name, $category, $price, $discount = 0);
     public function getName();
