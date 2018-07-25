@@ -1,5 +1,5 @@
-//////////10 основное задание
 <?php
+//основное
 interface  iVenicle{
     public function is_need();
     public function accelerate($speed );
