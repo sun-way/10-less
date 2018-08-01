@@ -1,6 +1,7 @@
 <?php
 //основное
-interface  iVenicle{
+interface  iVenicle
+{
     public function is_need();
     public function accelerate($speed );
     public function stop();
@@ -10,7 +11,8 @@ interface  iVenicle{
     public function getPower();
     public function getSpeed();
 }
-class Venicle  implements iVenicle {  //суперкласс для  car
+class Venicle  implements iVenicle 
+{  //суперкласс для  car
     public static $need_Peoples = 1;
     public $brand;
     public $model;
@@ -52,7 +54,6 @@ class Venicle  implements iVenicle {  //суперкласс для  car
 }
 class Car extends Venicle
 {
-
     public static function need_AgainstPeople()
     {
         self::$need_Peoples = false;
@@ -80,7 +81,8 @@ echo '<br />';
 echo 'Honda восстребована на рынке: ', $Honda->is_need() ? 'да' : 'нет', '<br />';
 echo 'Bmv  восстребована на рынке: ', $bmv->is_need() ? 'да' : 'нет', '<br />';
 echo '********************************************************<br>';
-interface imedi{
+interface imedi
+{
     public function pushOnButton();
     public function turnOn();
     public function __construct($brand, $model, $diagonal);
@@ -138,7 +140,8 @@ echo 'Philips работает? ', $tvPhilips->isOn() ? 'да.нажата  кн
 echo 'LG работает? ', $tvLG->isOn() ? 'да, нажата  кнопка ON' : 'нет', '<br />';
 echo 'Philips выклю4ен? ', $tvPhilips->turnOff() ? 'да, отклю4или его' : 'нет', '<br />';
 echo '********************************************************<br>';
-interface iStationery {
+interface iStationery 
+{
     public function __construct($color);
     public function write($text);
 }
@@ -175,7 +178,8 @@ echo $orange->write('Каждыи охотник  желает знать  гд�
 echo $cherry->write('Каждыи охотник  желает знать  где сидит фазан');
 echo $sky->write('Каждыи охотник  желает знать  где сидит фазан');
 echo '********************************************************<br>';
-interface iwater {
+interface iwater 
+{
     public function __construct($breed, $weight, $number);
     public function feed($food);
     public function getWeigth();
@@ -230,7 +234,8 @@ echo '<br />';
 $duck1->feed($bread);
 echo 'Утка '.$duck1->number.'  после кормления весит: ', $duck1->getWeigth(), '<br>';
 echo '********************************************************<br>';
-interface  iShop{
+interface  iShop
+{
     public function __construct($name, $category, $price, $discount = 0);
     public function getName();
     public function getCategory();
@@ -238,7 +243,8 @@ interface  iShop{
     public function getDiscount();
     public function getPublicPrice();
 }
- abstract class Shop implements  iShop {//  суперкласс  Product
+ abstract class Shop implements  iShop
+ {//  суперкласс  Product
     public $brand;
     public $city;
     public $name;
